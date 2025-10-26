@@ -1,40 +1,67 @@
-# Gilbert Cell Mixer – IHP SG13G2
+# Gilbert Cell Mixer
+### MIXED SIGNAL MARATHON
+![](marathon5.png)
+  * [Abstract](#abstract)
+  * [Reference Circuit Details](#reference-circuit-details)
+  * [Reference Circuit Diagram](#reference-circuit-diagram)
+  * [Reference Circuit Waveform](#reference-circuit-waveform)
+  * [Tools Used](#tools-used)
+- [Simulation in esim](#simulation-in-esim)
+  * [Netlist](#netlist)
+  * [Conclusion](#conclusion)
+  * [Author](#author)
+  * [Acknowledgement](#acknowlegement)
+  * [References](#references)
 
-This project presents the **design and analysis of a Gilbert Cell Mixer** using the **IHP SG13G2** 130 nm SiGe BiCMOS process.  
-The mixer was designed and simulated using the **eSim tool** for analog/mixed-signal circuit simulation.
+## Abstract
 
----
+This paper presents the design and analysis of the Gilbert Cell Mixer using IHP SG13G2 technology. The proposed mixer provides **high gain performance** and **good linearity**. DC, Transient, and AC analyses were performed to evaluate key performance parameters. The mixer achieves a **conversion gain of approximately 2.5 dB** with an **operating frequency of 2 GHz**.
 
-## 📄 Abstract
+## Reference Circuit Details
 
-This paper presents the design and analysis of the Gilbert Cell Mixer using IHP SG13G2 technology.  
-The proposed mixer provides **high gain performance** and **good linearity**.  
-DC, Transient, and AC analyses were performed to evaluate key performance parameters.  
-The mixer achieves a **conversion gain of approximately 2.5 dB** with an **operating frequency of 2 GHz**.
 
----
+![](ref.png)
+
+## Reference Circuit Diagram
+![](ref2.png)
+
+
+## Reference Circuit Waveform
+![](ref3.png)
+
+
+
 
 ## 🧰 Tools & Technology
 
-- **Design Tool:** eSim  
-- **Process Technology:** IHP SG13G2 (130 nm SiGe BiCMOS)  
-- **Simulation Types:** DC, AC, and Transient  
-- **Operating Frequency:** 2 GHz  
+- **Design Tool:** eSim : eSim is an open-source Electronic Design Automation (EDA) tool developed by FOSSEE, IIT Bombay, for circuit design, simulation, and PCB design.
+  It integrates multiple open-source tools (KiCad, ngspice ..) to provide a complete environment for analog, digital, and mixed-signal circuit simulation.
+- **Process Technology:** IHP SG13G2 (130 nm SiGe BiCMOS)   
 
----
+• eSim: 
+ ![](ref4.png)
 
-## ⚙️ Features
+# Simulation in eSim
 
-- Differential **Gilbert Cell topology**
-- **Active mixer** with balanced LO and RF ports
-- **Conversion gain:** ~2.5 dB
-- **Good linearity** and low distortion
-- Complete simulation setup and testbench
-
----
+## Implementation in eSim
 
 
----
+## Transient Analysis 
 
-## 📁 Repository Contents
+## AC Analysis 
+
+## DC Analysis
+
+
+## Netlist
+
+## Author
+Ajay G Nayak, self.
+
+## Acknowledgement
+1. FOSSEE,IIT Bombay
+2. Sumanto Kar, eSim Team, FOSSEE
+
+## References
+
 
