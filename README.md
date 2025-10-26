@@ -5,7 +5,7 @@
   * [Reference Circuit Details](#reference-circuit-details)
   * [Reference Circuit Diagram](#reference-circuit-diagram)
   * [Reference Circuit Waveform](#reference-circuit-waveform)
-  * [Tools Used](#tools-used)
+  * [Tools & Technology](#tools-&-technology)
 - [Simulation in esim](#simulation-in-esim)
   * [Netlist](#netlist)
   * [Conclusion](#conclusion)
