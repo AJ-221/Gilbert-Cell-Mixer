@@ -49,36 +49,54 @@ This paper presents the design and analysis of the Gilbert Cell Mixer using IHP 
 ## Analysis 
 
 ### DC
+The DC analysis determined the valid RF bias range between 0.6 V and 0.8 V, confirming proper transistor operation.
+
+<img width="625" height="477" alt="image" src="https://github.com/user-attachments/assets/01fc4267-2167-4c55-b3d3-fdab5a218071" />
+
 
 ### Transient
-RF INPUT : V(VRF+) - V(VRF-)
+In transient analysis, the RF signal of 0.1 GHz and LO signal of 2 GHz were applied to the Gilbert cell. The output waveform shows a modulated pattern, confirming the mixing action.
+
+RF INPUT WAVEFORM : V(VRF+) - V(VRF-)
+where, VRF​+ = 0.7 + 5 mV⋅sin(2πfRF​t)  
+VRF- = 0.7 - 5 mV⋅sin(2πfRF​t)
+fR = 0.1GHz
+
 <img width="647" height="464" alt="image" src="https://github.com/user-attachments/assets/4ed6d0d3-b51f-4700-bded-ce87f67fa46c" />
 
 
 LO INPUT : V(VLO+) - V(VLO-)
+where, VLO​+ = 1 + 5 mV⋅sin(2πfLO​t)  
+VLO- = 1 - 5 mV⋅sin(2πfLOt)
+fLO = 2GHz
 
-<img width="656" height="471" alt="image" src="https://github.com/user-attachments/assets/073c026c-2c45-4bd2-a06b-239b94386f93" />
+<img width="656" height="467" alt="image" src="https://github.com/user-attachments/assets/07373ec5-9e27-4c05-9098-52aec1e4a671" />
 
-VOUT : V(VOUT+) - V(VOUT-)
+MODULATED OUTPUT : V(VOUT+) - V(VOUT-)
 
-<img width="650" height="470" alt="image" src="https://github.com/user-attachments/assets/64056d17-12a0-47bb-8252-ec473f220f41" />
+<img width="656" height="468" alt="image" src="https://github.com/user-attachments/assets/881bfe18-2614-4737-8ca4-7f9bbcdf7ea1" />
 
 
 
 ### AC
+The AC analysis of the designed Gilbert cell mixer shows a maximum small-signal voltage gain of 2.5 dB with a 3 dB bandwidth of 5 GHz. The results indicate that the mixer provides stable gain performance over a wide frequency range.
 
 <img width="1105" height="484" alt="image" src="https://github.com/user-attachments/assets/4525520c-5806-427b-835b-2c015aeed34e" />
 
 <img width="1138" height="482" alt="image" src="https://github.com/user-attachments/assets/733d71c7-a863-4c03-88ce-ffc9bc37d9e9" />
 
+## Conclusion 
+The Gilbert cell mixer was successfully designed and analyzed using the IHP SG13G2 technology. Transient and AC analyses were performed to verify its functionality and frequency response. The circuit achieved a maximum small-signal gain of 2.5 dB with a 3 dB bandwidth of 5 GHz.
+
+For future work, further analyses will be carried out to fully qualify the mixer’s performance. These include noise figure analysis, conversion gain and loss characterization, linearity tests such as 1 dB compression point (P1dB) and third-order intercept point (IIP3/OIP3), isolation measurements between LO, RF, and IF ports, and power consumption evaluation. These parameters are essential to comprehensively assess the efficiency and suitability of the mixer for RF front-end applications.
 
 ## Author
 Ajay G Nayak, self.
 
 ## Acknowledgement
-1. FOSSEE,IIT Bombay
+1. FOSSEE, IIT Bombay
 2. Sumanto Kar, eSim Team, FOSSEE
 
 ## References
-
-
+1. M. O. Bekkaoui, "Gilbert cell Mixer design in 65nm CMOS technology," 2017 4th International Conference on Electrical and Electronic Engineering (ICEEE), Ankara, Turkey, 2017, pp. 67-72.
+2. U. A. Belorkar, S. A. Ladhake and S. N. Kale, "2.45 GHz Gilbert Mixer using 45 nm CMOS technology," 2012 IEEE Business, Engineering \& Industrial Applications Colloquium (BEIAC), 2012.
