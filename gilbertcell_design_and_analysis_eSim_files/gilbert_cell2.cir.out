@@ -1,0 +1,32 @@
+.title kicad schematic 
+  
+.lib /home/ajay/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt 
+Vv4 Net-_v4-+_ GND DC 1.5 AC 1.5  
+R1 Net-_v4-+_ Net-_M1-D_ 1k 
+Vv5 VLO- GND DC 1 SIN( 1 -5m 2G 0 0 0 ) AC 15m 180 
+XM1 Net-_M1-D_ Net-_M1-D_ GND GND sg13_lv_nmos w=2u l=0.13u 
+Vv3 VLO+ GND DC 1 SIN( 1 5m 2G 0 0 0 ) AC 15m 0 
+Vv2 VRF- GND DC 0.7 SIN( 0.7 -5m 0.1G 0 0 0 ) AC 50m 180 
+Vv1 VRF+ GND DC 0.7 SIN( 0.7 5m 0.1G 0 0 0 ) AC 50m 0 
+R3 Net-_v4-+_ VOUT- 1.4k 
+XM8 VOUT- VLO+ Net-_M6-B_ Net-_M6-B_ sg13_lv_nmos w=13u l=0.13u 
+XM6 VOUT+ VLO- Net-_M6-B_ Net-_M6-B_ sg13_lv_nmos w=13u l=0.13u 
+XM7 Net-_M6-B_ VRF- Net-_M3-B_ Net-_M3-B_ sg13_lv_nmos w=8u l=0.13u 
+R2 Net-_v4-+_ VOUT+ 1.4k 
+XM4 VOUT- VLO- Net-_M2-B_ Net-_M2-B_ sg13_lv_nmos w=13u l=0.13u 
+XM2 VOUT+ VLO+ Net-_M2-B_ Net-_M2-B_ sg13_lv_nmos w=13u l=0.13u 
+XM5 Net-_M3-B_ Net-_M1-D_ GND GND sg13_lv_nmos w=10.1u l=0.13u 
+XM3 Net-_M2-B_ VRF+ Net-_M3-B_ Net-_M3-B_ sg13_lv_nmos w=8u l=0.13u 
+*.op 
+*.tran 25e-12 10e-09 0e-00 
+.ac dec 10 1Hz 5GHz 
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vout+) - v(vout-)
+plot v(vout-) 
+.endc
+.end

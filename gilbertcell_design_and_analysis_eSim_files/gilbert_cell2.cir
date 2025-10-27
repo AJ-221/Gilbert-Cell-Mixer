@@ -1,0 +1,18 @@
+.title KiCad schematic
+Vv4 Net-_v4-+_ GND DC
+R1 Net-_v4-+_ Net-_M1-D_ 1k
+Vv5 VLO- GND SINE
+M1 Net-_M1-D_ Net-_M1-D_ GND GND CMOSN  
+Vv3 VLO+ GND SINE
+Vv2 VRF- GND SINE
+Vv1 VRF+ GND SINE
+R3 Net-_v4-+_ VOUT- 1.4k
+M8 VOUT- VLO+ Net-_M6-B_ Net-_M6-B_ CMOSN 
+M6 VOUT+ VLO- Net-_M6-B_ Net-_M6-B_ CMOSN 
+M7 Net-_M6-B_ VRF- Net-_M3-B_ Net-_M3-B_ CMOSN 
+R2 Net-_v4-+_ VOUT+ 1.4k
+M4 VOUT- VLO- Net-_M2-B_ Net-_M2-B_ CMOSN 
+M2 VOUT+ VLO+ Net-_M2-B_ Net-_M2-B_ CMOSN 
+M5 Net-_M3-B_ Net-_M1-D_ GND GND CMOSN 
+M3 Net-_M2-B_ VRF+ Net-_M3-B_ Net-_M3-B_ CMOSN
+.end
